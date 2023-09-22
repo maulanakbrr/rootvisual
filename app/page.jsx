@@ -1,8 +1,12 @@
-
+import HomeCarousel from "@/components/HomeCarousel"
+import Image from "next/image"
 
 const Home = () => {
   return (
-    <section>Home</section>
+    <section>
+      <HomeCarousel/>
+      
+    </section>
   )
 }
 

@@ -1,27 +1,60 @@
 'use client'
-import { useState } from "react"
+import { useState, useCallback, useEffect } from "react"
 import Link from "next/link"
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import styled from "styled-components";
+
+const LinkNav = styled.span`
+  text-decoration: none;
+`
 
 const BootstrapNav = () => {
-  // const [toggleDropdown, setToggleDropdown] = useState(false)
+  const [y, setY] = useState(0)
 
-  // const handleToggleDropdown = () => setToggleDropdown(prev => !prev)
+  const handleNavigation = useCallback(
+    e => {
+      const window = e.currentTarget;
+      if (y > window.scrollY) {
+        console.log("scrolling up");
+      } else if (y < window.scrollY) {
+        console.log("scrolling down");
+      }
+      setY(window.scrollY);
+    }, [y]
+  );
+
+  console.log("Y:: ", y)
+
+  useEffect(() => {
+    setY(window.scrollY);
+    window.addEventListener("scroll", handleNavigation);
+  
+    return () => {
+      window.removeEventListener("scroll", handleNavigation);
+    };
+  }, [handleNavigation]);
 
   return (
-    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
+    <Navbar collapseOnSelect expand="lg" fixed='top' className={y ? 'bg-dark' : 'bg-transparent'}>
       <Container>
-        <Navbar.Brand href="#home">RootVisual</Navbar.Brand>
+        <Navbar.Brand>
+          
+          <Link href='/' style={{ textDecoration: 'none'}} className="text-white">
+            RootVisual
+          </Link>
+          
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          {/* <Nav className="me-auto"><Nav.Link href="#features">Gallery</Nav.Link></Nav> */}
           <Nav className="ms-auto ustify-content-end">
-            <Nav.Link href="#features">Gallery</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-            <Nav.Link href="#pricing">About Us</Nav.Link>
+            <Nav.Link as='span'>
+              <Link href='/gallery' style={{ textDecoration: 'none'}} className="text-white">Gallery</Link>
+            </Nav.Link>
+            <Nav.Link as='span'>
+              <Link href='/about' style={{ textDecoration: 'none'}} className="text-white">About Us</Link>
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
