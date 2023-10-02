@@ -19,7 +19,7 @@ const HomeGallery = () => {
   return (
     <CustomContainer>
       <h2>Our Gallery</h2>
-      <p><a href={'/gallery'} onClick={handleClick} style={{ textDecoration: 'none' }}>Click here</a> too see more</p>
+      <p className="proj-p">See more their moment <a href={'/gallery'} onClick={handleClick} style={{ textDecoration: 'none' }}>here</a></p>
 
       <Row lg={4} className="row-gap-4">
         {

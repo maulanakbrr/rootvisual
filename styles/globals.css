@@ -6,9 +6,16 @@
 
 body {
   background-color: #ededed;
-  
 }
 
 .proj-main-container{
   min-height: 92.5vh;
+}
+
+.proj-p {
+  font-size: 1rem;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 1.2rem;
+  }
 }

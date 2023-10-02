@@ -8,8 +8,7 @@ import CustomContainer from '../CustomContainer'
 const ThisRow = styled(Row)`
   #home-about-desc {
     margin-bottom: 2rem;
-    letter-spacing: .1rem;
-    font-size: 1rem;
+    // font-size: 1rem;
     text-align: center;
   }
 
@@ -45,7 +44,7 @@ const ThisRow = styled(Row)`
   @media screen and (min-width: 1200px) {
 
     #home-about-desc {
-      font-size: 1.2rem;
+      // font-size: 1.2rem;
     }
 
     #home-about-image-container {
@@ -71,7 +70,7 @@ const HomeAbout = () => {
       <ThisRow>
         <Col xl={8} lg={6} xs={12}>
 
-          <p id='home-about-desc'>
+          <p id='home-about-desc' className='proj-p'>
             Introducing, we, RootVisual sincerely keen to enlighten up and memorialize your celebration. Established since 2016 and located in South Tangerang, Indonesia. However, we would love to accompany you all over the world. Every single detail of your moment will be wellcelebrated with our delightful and fun working atmosphere also professional team. Moreover, we offer you various moodboards, stylists, make-ups, dress vendors, and many more. So, what are you waiting for? there is no more doubts and fears to be in front of the camera. Cheers!
           </p>
 
