@@ -46,7 +46,10 @@ const HomeCarousel = () => {
       
       {
         DUMMY_DATA.map(item => (
-          <Carousel.Item key={item.id} interval={1000}>
+          <Carousel.Item 
+            key={item.id} 
+            // interval={1000}
+          >
             <CarouselBackgroundImage imageurl={item.imageUrl}/>
             <Carousel.Caption>
               <h3>{item.title}</h3>

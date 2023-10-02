@@ -25,8 +25,6 @@ const BootstrapNav = () => {
     }, [y]
   );
 
-  console.log("Y:: ", y)
-
   useEffect(() => {
     setY(window.scrollY);
     window.addEventListener("scroll", handleNavigation);
