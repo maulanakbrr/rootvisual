@@ -1,19 +1,9 @@
 'use client'
-import { Container, Row, Col, Button } from 'react-bootstrap'
-import Link from 'next/link'
 import Image from 'next/image'
+import Link from 'next/link'
+import { Button, Col, Container, Row } from 'react-bootstrap'
 import styled from 'styled-components'
-
-const ThisContainer = styled(Container)`
-  height: auto;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-
-  @media screen and (min-width: 992px) {
-    height: 100vh;
-  }
-`
+import CustomContainer from '../CustomContainer'
 
 const ThisRow = styled(Row)`
   #home-about-desc {
@@ -76,7 +66,7 @@ const MainTitle = styled.h1`
 
 const HomeAbout = () => {
   return (
-    <ThisContainer>
+    <CustomContainer>
       <MainTitle>Welcome to RootVisual</MainTitle>
       <ThisRow>
         <Col xl={8} lg={6} xs={12}>
@@ -110,7 +100,7 @@ const HomeAbout = () => {
           </div>
         </Col>
       </ThisRow>
-    </ThisContainer>
+    </CustomContainer>
   )
 }
 
