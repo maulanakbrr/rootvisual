@@ -16,11 +16,7 @@ const BootstrapNav = () => {
   const handleNavigation = useCallback(
     e => {
       const window = e.currentTarget;
-      if (y > window.scrollY) {
-        console.log("scrolling up");
-      } else if (y < window.scrollY) {
-        console.log("scrolling down");
-      }
+      if (y > window.scrollY || y < window.scrollY)
       setY(window.scrollY);
     }, [y]
   );
@@ -35,7 +31,7 @@ const BootstrapNav = () => {
   }, [handleNavigation]);
 
   return (
-    <Navbar collapseOnSelect expand="lg" fixed='top' className={y ? 'bg-dark' : 'bg-transparent'}>
+    <Navbar collapseOnSelect expand="lg" fixed='top' bg={y ? 'dark' : 'transparent'} data-bs-theme="dark">
       <Container>
         <Navbar.Brand>
           
