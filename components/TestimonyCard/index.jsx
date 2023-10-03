@@ -15,7 +15,7 @@ const TestimonyCard = ({isHomepage}) => {
   return (
     <TestimonyCardContainer isHomepage={isHomepage}>
       <div style={{ borderRadius: '50%', overflow: 'hidden', position: 'relative', width: '5rem', height: '5rem', marginRight: '1rem' }}>
-        <Image src='/assets/ava/ava1.jpg' alt='image' fill objectFit="cover"/>
+        <Image src='/assets/ava/ava1.jpg' alt='image' fill style={{objectFit:"cover"}}/>
         
       </div>
       <blockquote className="blockquote mb-0 d-flex flex-column justify-content-center">
