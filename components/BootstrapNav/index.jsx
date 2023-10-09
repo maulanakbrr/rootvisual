@@ -31,7 +31,7 @@ const BootstrapNav = () => {
   }, [handleNavigation]);
 
   return (
-    <Navbar collapseOnSelect expand="lg" fixed='top' bg={y ? 'dark' : 'transparent'} data-bs-theme="dark">
+    <Navbar collapseOnSelect expand="lg" fixed='top' bg='dark' data-bs-theme="dark" className={y ? "" : "bg-opacity-25"}>
       <Container>
         <Navbar.Brand>
           
@@ -47,7 +47,13 @@ const BootstrapNav = () => {
               <Link href='/gallery' style={{ textDecoration: 'none'}} className="text-white">Gallery</Link>
             </Nav.Link>
             <Nav.Link as='span'>
+              <Link href='/testimonies' style={{ textDecoration: 'none'}} className="text-white">Testimonies</Link>
+            </Nav.Link>
+            <Nav.Link as='span'>
               <Link href='/about' style={{ textDecoration: 'none'}} className="text-white">About Us</Link>
+            </Nav.Link>
+            <Nav.Link as='span'>
+              <Link href='/faq' style={{ textDecoration: 'none'}} className="text-white">FAQ</Link>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

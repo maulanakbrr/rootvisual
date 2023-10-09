@@ -8,7 +8,6 @@ import CustomContainer from '../CustomContainer'
 const ThisRow = styled(Row)`
   #home-about-desc {
     margin-bottom: 2rem;
-    // font-size: 1rem;
     text-align: center;
   }
 
