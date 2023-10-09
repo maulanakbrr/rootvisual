@@ -15,7 +15,7 @@ const FAQ = () => {
       <FAQContent/>
 
       <div>
-        <p style={{ textAlign: 'center' }}>If your questions is not on the list, feel free to contact us on our instagram or whatsapp</p>
+        <p style={{ textAlign: 'center' }} className='proj-p'>If your questions is not on the list, feel free to contact us on our instagram or whatsapp</p>
       </div>
     </CustomContainer>
   )

@@ -14,7 +14,9 @@ const FAQContent = () => {
         {
           DUMMY_FAQ_DATA.map(item => (
             <Accordion.Item key={item.id} eventKey={item.id}>
-              <Accordion.Header>{item.question}</Accordion.Header>
+              <Accordion.Header>
+                <span className="text-primary">{item.question}</span>
+              </Accordion.Header>
               <Accordion.Body>
                 {item.answer}
                 {item?.subAnswer && (
