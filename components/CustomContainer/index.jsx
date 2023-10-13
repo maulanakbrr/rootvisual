@@ -16,7 +16,8 @@ const ModContainer = styled(Container)`
 
 const PageContainer = styled(Container)`
   margin-top: 56px;
-  padding: 3rem 0;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 `
 
 const CustomContainer = ({ children, isPage }) => {
