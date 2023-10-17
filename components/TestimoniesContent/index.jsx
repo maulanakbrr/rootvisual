@@ -6,7 +6,7 @@ import TestimonyCard from "../TestimonyCard"
 
 const TestimoniesContent = () => {
   return (
-    <Row>
+    <Row className="row-gap-4">
       {
         TESTIMONIES_DUMMY.map(item => (
           <Col key={item.id} xs={12} md={6} lg={4} xl={3}>
