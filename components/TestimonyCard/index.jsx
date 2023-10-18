@@ -21,7 +21,7 @@ const homepageStyle = {
   position: 'relative',
   width: '5rem',
   height: '5rem',
-  // marginRight: '1rem'
+  marginRight: '1rem'
 }
 
 const defaultStyle = {
