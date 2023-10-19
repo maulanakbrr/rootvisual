@@ -14,8 +14,23 @@ body {
 
 .proj-p {
   font-size: 1rem;
+}
 
-  @media screen and (min-width: 1200px) {
+.go-to-top {
+  width: 2rem;
+  height: 2rem;
+  position: fixed;
+  bottom: 1.8rem;
+  right: 1.8rem;
+  z-index: 200;
+}
+
+.go-to-top:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1200px) {
+  .proj-p {
     font-size: 1.2rem;
   }
 }

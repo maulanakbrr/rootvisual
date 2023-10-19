@@ -1,9 +1,10 @@
 import GalleryProvider from './context'
+import ScrollTopIcon from '@/components/ScrollTopIcon'
 
 const GalleryLayout = ({children}) => {
   return (
     <GalleryProvider>
-      <div>sisisi</div>
+      <ScrollTopIcon/>
       {children}
     </GalleryProvider>
   )
