@@ -7,8 +7,8 @@ import CustomContainer from '../CustomContainer'
 
 const ThisRow = styled(Row)`
   #home-about-desc {
-    margin-bottom: 2rem;
-    text-align: center;
+    margin-bottom: 1rem;
+    text-align: justify;
   }
 
   #home-about-btn-container {
@@ -17,11 +17,18 @@ const ThisRow = styled(Row)`
   }
 
   #home-about-image-container {
+    display: none;
     width: 80%;
     height: auto;
     margin: 0 auto;
     margin-top: .5rem;
     margin-bottom: 3rem; 
+  }
+
+  @media screen and (min-width: 768px) {
+    #home-about-desc {
+      text-align: center;
+    }
   }
 
   @media screen and (min-width: 992px) {
@@ -33,19 +40,16 @@ const ThisRow = styled(Row)`
     #home-about-btn-container {
       text-align: left;
       margin-bottom: 0;
+      margin-top: 2rem;
     }
 
     #home-about-image-container {
       margin-bottom: 0;
+      display: block;
     }
   }
 
   @media screen and (min-width: 1200px) {
-
-    #home-about-desc {
-      // font-size: 1.2rem;
-    }
-
     #home-about-image-container {
       margin-top: .5rem;
     }
@@ -74,11 +78,11 @@ const HomeAbout = () => {
           </p>
 
           <div id='home-about-btn-container'>
-          <Link href='/about' style={{ textDecoration: 'none', marginTop: '3rem' }}>
-            <Button variant='primary'>
-              About Us
-            </Button>
-          </Link>
+            <Link href='/about' style={{ textDecoration: 'none' }}>
+              <Button variant='primary'>
+                About Us
+              </Button>
+            </Link>
           </div>
         </Col>
 

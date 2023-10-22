@@ -9,10 +9,22 @@ const TestimonyCardContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding: ${props => props.isHomepage ? '4rem 0 5rem 0' : '2rem 1.5rem' } ;
-  width: ${props => props.isHomepage ? '80%' : '100%'};
+  width: 100%;
   margin: 0 auto;
   border: ${props => props.isHomepage ? 'none' : '1px solid rgba(0,0,0,.5)'};
   border-radius: ${props => props.isHomepage ? 'none' : '1em' };
+
+  blockquote {
+    width: calc(100% - 5rem);
+  }
+
+  @media screen and (min-width: 992px) {
+    width: ${props => props.isHomepage ? '80%' : '100%'};
+
+    blockquote {
+      width: auto;
+    }
+  }
 `
 
 const homepageStyle = {
