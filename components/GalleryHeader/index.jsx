@@ -32,8 +32,6 @@ const GalleryHeaderCol = styled(Col)`
 const GalleryHeader = () => {
   const { currentpage, setCurrentpage } = useContext(GalleryContext)
 
-  console.log('currentpage:: ', currentpage)
-
   return (
     <Row className="my-5">
       <GalleryHeaderCol>

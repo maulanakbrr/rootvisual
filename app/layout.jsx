@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@/styles/globals.css'
-import BootstrapNav from '@/components/BootstrapNav'
+import Navbar from '@/components/Navbar';
+import MainContainer from '@/components/MainContainer';
 import Footer from '@/components/Footer';
 
 export const metadata = {
@@ -13,10 +14,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <BootstrapNav/>
-        <main className='proj-main-container'>
+        <Navbar/>
+        <MainContainer>
           {children}
-        </main>
+        </MainContainer>
         <Footer/>
       </body>
     </html>
