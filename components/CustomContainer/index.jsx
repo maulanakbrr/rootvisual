@@ -5,12 +5,23 @@ import styled from "styled-components"
 
 const ModContainer = styled(Container)`
   height: auto;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  display: ${props => props.adminSection ? 'block' : 'flex'};
+  ${
+    props => props.adminSection ? `
+      padding: 2rem 1.5rem;
+    ` : `
+      justify-content: center;
+      flex-direction: column;
+    `
+  }
 
   @media screen and (min-width: 992px) {
-    height: 100vh;
+    ${
+      props => props.adminSection && `
+        min-height: calc(100vh - 112px);
+      `
+    }
+    height: ${props => props.adminSection ? 'auto' : '100vh'};
   }
 `
 
@@ -25,11 +36,10 @@ const AdminContainer = styled.div`
   margin-left: 20%;
   width: 80%;
   min-height: calc(100vh - 112px);
-  background-color: pink;
   overflow-y: auto;
 `
 
-const CustomContainer = ({ children, isPage, isAdmin }) => {
+const CustomContainer = ({ children, isPage, isAdmin, adminSection }) => {
   if (isPage) return (
     <PageContainer>{children}</PageContainer>
   )
@@ -39,7 +49,7 @@ const CustomContainer = ({ children, isPage, isAdmin }) => {
   )
 
   return (
-    <ModContainer>{children}</ModContainer>
+    <ModContainer adminSection>{children}</ModContainer>
   )
 }
 
