@@ -1,8 +1,11 @@
 import CustomContainer from "@/components/CustomContainer"
+import SignInForm from "@/components/SignInForm"
 
 const SignIn = () => {
   return (
-    <CustomContainer isPage>SignIn</CustomContainer>
+    <CustomContainer isPage>
+      <SignInForm/>
+    </CustomContainer>
   )
 }
 

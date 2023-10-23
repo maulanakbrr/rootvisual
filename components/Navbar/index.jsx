@@ -19,8 +19,6 @@ const Navbar = () => {
 
   const isAdminMemo = useMemo(() => handleIsAdmin(isAdmin), [isAdmin])
 
-  console.log('yo render')
-
   return (
     <>
       {

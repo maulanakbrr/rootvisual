@@ -9,7 +9,7 @@ body {
 }
 
 .proj-main-container{
-  min-height: calc(100vh - 56px);
+  min-height: calc(100vh - 112px);
 }
 
 .proj-p {
